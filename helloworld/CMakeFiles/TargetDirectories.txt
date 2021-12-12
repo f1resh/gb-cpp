@@ -1,0 +1,3 @@
+/home/f1resh/geek_brains/gb-cpp/helloworld/CMakeFiles/rebuild_cache.dir
+/home/f1resh/geek_brains/gb-cpp/helloworld/CMakeFiles/edit_cache.dir
+/home/f1resh/geek_brains/gb-cpp/helloworld/CMakeFiles/main3.dir
