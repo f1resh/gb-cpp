@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    //Задание #1
+    //Task1 #1
     {
         short int   iVar1 = -42;
         int         iVar2(232322);
@@ -15,7 +15,7 @@ int main()
         auto        Var4 = double(-232.444242);
     }
 
-    //Задание #2
+    //Task #2
     {
         enum FieldSymbols {
             Empty = ' ',
@@ -23,10 +23,10 @@ int main()
             Zero = 'O'
         };
 
-    //Задание #3
+    //Task #3
         FieldSymbols Field[3][3] = { Empty,Zero,Empty,Empty,Empty,Cross,Empty,Empty,Empty };
 
-        //это просто для вывода
+        //for output
         for (int i = 0; i < 3; ++i) {
             for (int j = 0; j < 3; ++j) {
                 cout << (char)Field[i][j] << "|";
@@ -35,18 +35,18 @@ int main()
             
         }
 
-    //Задание #4
+    //Task #4
         struct TicTacToe {
-            //инициализация пустого поля
+            //initializing of empty field
             FieldSymbols Field[3][3] = { Empty,Empty,Empty,Empty,Empty,Empty,Empty,Empty,Empty };
 
-            //имена правда менять нельзя будет в СИ-строках, либо надо делать ссылками
+            //can't change C-strings, only by pointers :)
             char Player1[9] = "Player 1";
             char Player2[9] = { 'P','l','a','y','e','r',' ','2',0 };
 
             bool isFinished = 0;
 
-            //хранить чей ход, начинает 1 игрок всегда
+            //who's turn
             enum Turn {
                 P1,
                 P2
@@ -55,7 +55,7 @@ int main()
         };
     }
 
-    //Задание #5
+    //Task #5
     {
         struct MyVariant {
             union MyData {
