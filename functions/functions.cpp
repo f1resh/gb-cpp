@@ -91,7 +91,7 @@ int main()
 
 
 //print array of doubles
-void PrintArray(const double* dArray, int length) {
+void __fastcall PrintArray(const double* dArray, const size_t length) {
 	for (size_t i = 0; i < length; ++i) {
 		cout << dArray[i] << " "s;
 	}
@@ -99,7 +99,7 @@ void PrintArray(const double* dArray, int length) {
 }
 
 //overload: array of int
-void PrintArray(const int* nArray, int length) {
+void __fastcall PrintArray(const int* nArray, const size_t length) {
 	for (size_t i = 0; i < length; ++i) {
 		cout << nArray[i] << " "s;
 	}
@@ -107,27 +107,27 @@ void PrintArray(const int* nArray, int length) {
 }
 
 //fill array with random int numbers up to max_value
-void FillArray(int* nArray, int length, int max_value) {
+void FillArray(int* nArray, const size_t length, int max_value) {
 	for (size_t i = 0; i < length; ++i) {
 		nArray[i] = rand() % (max_value + 1);
 	}
 }
 
 //inverse 1->0 and 0->1
-void InverseArray(int* nArray, int length) {
+void InverseArray(int* nArray, const size_t length) {
 	for (size_t i = 0; i < length; ++i) {
 		nArray[i] ^= 1;
 	}
 }
 
 //Task 3
-void FillArrayTask3(int* nArray, int length) {
+void FillArrayTask3(int* nArray, const size_t length) {
 	for (size_t i = 0; i < length; ++i) {
 		nArray[i] = 1 + i * 3;
 	}
 }
 
-void ShiftArray(int* nArray, int length, int shift) {
+void ShiftArray(int* nArray, const size_t length, int shift) {
 	int shiftNormalized = shift % length;
 
 	if (shiftNormalized == 0) {
@@ -143,7 +143,7 @@ void ShiftArray(int* nArray, int length, int shift) {
 	}
 }
 
-void ShiftArrayRight(int* nArray, int length) {
+void ShiftArrayRight(int* nArray, const size_t length) {
 	int last = nArray[length - 1];
 	for (int i = length - 1; i > 0; --i) {
 		nArray[i] = nArray[i - 1];
@@ -160,7 +160,7 @@ int SumSubArray(int* nArray, int first_index, int last_index) {
 	return sum;
 }
 
-bool CheckBalance(int* nArray, int length) {
+bool CheckBalance(int* nArray, const size_t length) {
 	for (int i = 1; i < length; ++i) {
 		if (SumSubArray(nArray, 0, i) == SumSubArray(nArray, i, length)) return true;
 	}
